@@ -1,0 +1,17 @@
+@function calc-em($target-px, $context) {
+  @return ($target-px / $context) * 1em;
+}
+
+@mixin center-container  {
+  width:  (percentage($container-width / $page-context)) - ($blueprint-liquid-grid-margin * 2);
+  padding: 0 ($blueprint-liquid-grid-margin * 2);
+  margin: 0 auto;
+}
+
+@mixin replace-text($width, $height, $background-details) {
+  text-indent: -9999px;
+  display: block;
+  width: $width;
+  height: $height;
+  @include background($background-details);
+}
