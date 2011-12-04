@@ -3,12 +3,29 @@
 // ------------------------------------------- //
 //    BODY & GLOBAL   												 //
 // ------------------------------------------- //
-
 body {
-
-}
-
-
+  width: 100%;
+  background: #FFF;
+  
+  //Establish a baseline grid and set default typography throughout site
+  color: #000;
+  color: rgba(51,51,51, 1);
+  font: 100%/1.618 $secondary-font-family;
+  
+  
+  //Set link colors
+  a {
+    @include link-colors($link-color, $link-hover-color, $link-active-color, $link-visited-color, $link-focus-color); 
+  }
+  
+  //Set horizontal list for navigation
+  nav {
+    > ul {
+      @include horizontal-list(false);
+    } //ul
+  } //nav
+  
+} //body
 
 
 // ------------------------------------------- //
@@ -31,14 +48,21 @@ nav {
 // ---- Containers --------------------------- //
 
 .container {
-  
+  @include center-container(950px);
 }
 
 // ---- Main Content ------------------------- //
 
 .main-content {
-  
-}
+  > section {
+    margin: 0 0 calc-em(64px, $base-font-size) 0;
+    > h2 {
+      border-bottom: 1px solid #CCC;
+    }
+    
+  } //section
+} //main-content
+
 
 
 // ---- Secondary Content -------------------- //

@@ -1,6 +1,93 @@
 // ------------------------------------------- //
-//    Form styles largely taken and modified   //
-//    from formalize.css		  								 //
+//            Form layout styles               //
+// ------------------------------------------- //
+
+form {
+
+}
+
+.form-list {
+  margin: 0;
+  padding: 0;
+  
+  > li {
+    margin: 0 0 calc-em(16px, $base-font-size);
+    padding: 0 0 calc-em(4px, $base-font-size);
+    list-style-type: none;
+  }
+  
+  .short-clear,
+  .full-clear,
+  .form-header,
+  .form-buttons {
+    @include clearfix;
+  }
+  
+  .full-clear,
+  .form-header {
+    width: 100%;
+    input {
+      width: 100%;
+    }
+  }
+  
+  .form-buttons {
+    width: 100%;
+    .primary-action {
+      @include submit-button;
+    }
+    .secondary-action {
+      @include button-defaults;
+    }
+    .successful-action {
+      @include successful-button;
+    }
+    .warning-action {
+      @include warning-button;
+    }
+  }
+  
+  .short-clear,
+  .short-right {
+    @include column(11.5, last);
+    input {
+      width: 100%;
+    }
+  }
+  
+  .short-right {
+    float: right;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    font-size: calc-em(13px, $base-font-size);
+  } //label
+  
+  .form-title {
+    h2 {
+      margin: 0;
+    }
+    em {
+      font-size: calc-em(12px, $base-font-size);
+    }
+  }
+  
+  .form-header {
+    border-bottom: 1px solid #CCC;
+    h3 {
+      font-size: calc-em(16px, $base-font-size);
+      margin: 0;
+    }
+  }
+
+
+} //form-list
+
+// ------------------------------------------- //
+//    Form input styles largely taken and      //
+//    modified from formalize.css		  				 //
 // ------------------------------------------- //
 
 ::-moz-focus-inner {
@@ -82,7 +169,7 @@ button {
   -ms-background-clip: padding-box;
   -khtml-background-clip: padding-box;
   background-clip: padding-box;
-  background: #dddddd url('../images/button.png') repeat-x;
+  @include background(#ddd image-url('parts/forms/button.png') repeat-x top left);
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, white), color-stop(100%, #dddddd));
   background-image: -webkit-linear-gradient(white, #dddddd);
   background-image: -moz-linear-gradient(white, #dddddd);
@@ -117,7 +204,7 @@ input {
     -ms-background-clip: padding-box;
     -khtml-background-clip: padding-box;
     background-clip: padding-box;
-    background: #dddddd url('../images/button.png') repeat-x;
+    @include background(#ddd image-url('parts/forms/button.png') repeat-x top left);
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, white), color-stop(100%, #dddddd));
     background-image: -webkit-linear-gradient(white, #dddddd);
     background-image: -moz-linear-gradient(white, #dddddd);
@@ -218,37 +305,39 @@ textarea, select {
   *height: auto; }
 
 input {
-  &[type="date"], &[type="datetime"], &[type="datetime-local"], &[type="email"], &[type="month"], &[type="number"], &[type="password"], &[type="search"], &[type="tel"], &[type="text"], &[type="time"], &[type="url"], &[type="week"] {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding;
-    -o-background-clip: padding-box;
-    -ms-background-clip: padding-box;
-    -khtml-background-clip: padding-box;
-    background-clip: padding-box;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    -o-border-radius: 0;
-    -ms-border-radius: 0;
-    -khtml-border-radius: 0;
-    border-radius: 0;
+  &[type="date"], &[type="datetime"], &[type="datetime-local"], &[type="email"], &[type="month"], &[type="number"],
+  &[type="password"], &[type="search"], &[type="tel"], &[type="text"], &[type="time"], &[type="url"], &[type="week"], &[type="color"] {
+    @include box-sizing(border-box);
+    @include background-clip($default-background-clip);
+    @include border-radius(2px);
+    @include box-shadow(inset rgba(0,0,0,.1) 0 2px 3px);
     -webkit-appearance: none;
-    background-color: white;
-    border: 1px solid;
-    border-color: #848484 #c1c1c1 #e1e1e1;
-    color: black;
-    outline: 0;
-    padding: 2px 3px;
+    border: 1px solid #ccc;
+    background: #FFF;
+    font-size: calc-em(14px, $base-font-size);
+    padding: 4px;
     text-align: left;
-    font-size: 13px;
-    font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
-    height: 1.8em;
+    font-family: $font-family;
+    height: calc-em(32px, 14px);
+    line-height: calc-em(21px, 14px);
     *padding-top: 2px;
     *padding-bottom: 1px;
     *height: auto; } }
+
+:-moz-placeholder {
+  color: #bfbfbf;
+  font-style: italic;
+}
+::-webkit-input-placeholder {
+  color: #bfbfbf;
+  font-style: italic;
+}
+
+input:focus, textarea:focus {
+  outline: 0;
+  border-color: rgba(82, 168, 236, 0.8);
+  @include box-shadow(inset rgba(0,0,0,.1) 0 2px 3px, 0 0 6px rgba(82, 168, 236, 0.6));
+}
 
 textarea[disabled], select[disabled] {
   background-color: #eeeeee; }
@@ -303,10 +392,6 @@ textarea[disabled] {
   user-select: none;
   color: #888888;
   cursor: default; }
-
-::-webkit-input-placeholder, input:-moz-placeholder, textarea:-moz-placeholder, input.placeholder_text, textarea.placeholder_text {
-  color: #888888; }
-
 :invalid {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -322,7 +407,7 @@ select {
 
 @media (-webkit-min-device-pixel-ratio: 0) {
   select {
-    background-image: url('../images/select_arrow.gif');
+    @include background-image(image-url('parts/forms/select_arrow.gif'));
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -372,7 +457,7 @@ optgroup {
   
 /* IE6 Form Styles */
 .ie6_button {
-  background: #dddddd url('../images/button.png') repeat-x;
+  @include background(#ddd image-url('parts/forms/button.png') repeat-x top left);
   border: 1px solid;
   border-color: #dddddd #bbbbbb #999999;
   cursor: pointer;
@@ -383,7 +468,7 @@ optgroup {
   width: auto; }
 
 * html button {
-  background: #dddddd url('../images/button.png') repeat-x;
+  @include background(#ddd image-url('parts/forms/button.png') repeat-x top left);
   border: 1px solid;
   border-color: #dddddd #bbbbbb #999999;
   cursor: pointer;
@@ -431,3 +516,4 @@ optgroup {
 
 .ie6_input_disabled {
   background: #eeeeee; }
+

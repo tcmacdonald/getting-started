@@ -7,7 +7,8 @@ $blueprint-liquid-grid-columns            : 24;
 $blueprint-liquid-grid-width              : 3.167%;
 $blueprint-liquid-grid-margin             : 1.042%;
 $blueprint-liquid-container-width         : 80%;
-$blueprint-liquid-container-min-width     : 950px;
+$blueprint-liquid-container-min-width     : 320px;
+$blueprint-liquid-container-max-width     : 950px;
 
 /* Primary Typography configuration */
 $font-family	          : Helvetica, "Helvetica Neue", Arial, sans-serif;
@@ -51,6 +52,7 @@ $focus-border-color						: darken(#b0b0b0, 5%) darken(#ddd, 5%) darken(#ddd, 5%)
 $fieldset-border-color				: none;
 
 // Compass files to load
+@import "compass/css3";
 @import "compass/typography/links";
 @import "compass/typography/vertical_rhythm";
 @import "compass/typography/lists/horizontal-list";
@@ -59,31 +61,9 @@ $fieldset-border-color				: none;
 @import "blueprint/liquid";
 
 // Combine the partials into a single stylesheet.
-@import "partials/reset";
-@import "partials/form";
-@import "partials/custom_mixins";
-@import "partials/jquery_overrides";
-
-
-/* ------------------------------------------- */
-/*    SETUP MIXINS  METHODS         					 */
-/* ------------------------------------------- */
-
-body {
-  
-  //Set link colors
-  a {
-    @include link-colors($link-color, $link-hover-color, $link-active-color, $link-visited-color, $link-focus-color); 
-  }
-
-  //Set typography
-  
-  //Set horizontal list for navigation
-  nav {
-    > ul {
-      @include horizontal-list(false);
-    } //ul
-  } //nav
-  
-  
-} //body
+@import "reset";
+@import "custom_mixins";
+@import "button_mixins";
+@import "form";
+@import "notifications";
+@import "jquery_overrides";

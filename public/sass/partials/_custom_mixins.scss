@@ -2,9 +2,10 @@
   @return ($target-px / $context) * 1em;
 }
 
-@mixin center-container  {
-  width:  (percentage($container-width / $page-context)) - ($blueprint-liquid-grid-margin * 2);
-  padding: 0 ($blueprint-liquid-grid-margin * 2);
+@mixin center-container($container-width)  {
+  max-width:  $blueprint-liquid-container-max-width;
+  width:  (percentage($container-width / $blueprint-liquid-container-max-width)) - ($blueprint-liquid-grid-margin * 2);
+  padding: 0 ($blueprint-liquid-grid-margin);
   margin: 0 auto;
 }
 
@@ -14,4 +15,10 @@
   width: $width;
   height: $height;
   @include background($background-details);
+}
+
+/* One-true layout hack for equal height columns */
+@mixin equalize-column {
+	margin-bottom: -99999px;
+	padding-bottom: 99999px; 
 }
