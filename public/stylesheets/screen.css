@@ -920,7 +920,7 @@ button {
   -ms-background-clip: padding-box;
   -khtml-background-clip: padding-box;
   background-clip: padding-box;
-  background: #dddddd url('/images/parts/forms/button.png?1323098066') repeat-x top left;
+  background: #dddddd url('../images/parts/forms/button.png?1323098066') repeat-x top left;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, white), color-stop(100%, #dddddd));
   background-image: -webkit-linear-gradient(white, #dddddd);
   background-image: -moz-linear-gradient(white, #dddddd);
@@ -956,7 +956,7 @@ input[type="reset"], input[type="submit"], input[type="button"] {
   -ms-background-clip: padding-box;
   -khtml-background-clip: padding-box;
   background-clip: padding-box;
-  background: #dddddd url('/images/parts/forms/button.png?1323098066') repeat-x top left;
+  background: #dddddd url('../images/parts/forms/button.png?1323098066') repeat-x top left;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, white), color-stop(100%, #dddddd));
   background-image: -webkit-linear-gradient(white, #dddddd);
   background-image: -moz-linear-gradient(white, #dddddd);
@@ -1211,7 +1211,7 @@ select[size], select[multiple] {
 @media (-webkit-min-device-pixel-ratio: 0) {
   /* line 409, ../sass/partials/_form.scss */
   select {
-    background-image: url('/images/parts/forms/select_arrow.gif?1323098066');
+    background-image: url('../images/parts/forms/select_arrow.gif?1323098066');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -1267,7 +1267,7 @@ optgroup {
 /* IE6 Form Styles */
 /* line 459, ../sass/partials/_form.scss */
 .ie6_button {
-  background: #dddddd url('/images/parts/forms/button.png?1323098066') repeat-x top left;
+  background: #dddddd url('../images/parts/forms/button.png?1323098066') repeat-x top left;
   border: 1px solid;
   border-color: #dddddd #bbbbbb #999999;
   cursor: pointer;
@@ -1280,7 +1280,7 @@ optgroup {
 
 /* line 470, ../sass/partials/_form.scss */
 * html button {
-  background: #dddddd url('/images/parts/forms/button.png?1323098066') repeat-x top left;
+  background: #dddddd url('../images/parts/forms/button.png?1323098066') repeat-x top left;
   border: 1px solid;
   border-color: #dddddd #bbbbbb #999999;
   cursor: pointer;
@@ -1370,13 +1370,13 @@ optgroup {
 }
 /* line 21, ../sass/partials/_notifications.scss */
 #notifications .flash.notice {
-  background: #37aa11 url('/images/parts/icons/ico-flash-positive.png?1323098066') no-repeat 0.462em 0.615em;
-  background: url('/images/../parts/icons/ico-flash-positive.png') no-repeat 0.462em 0.615em, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #37aa11), color-stop(100%, #29840c));
-  background: url('/images/../parts/icons/ico-flash-positive.png') no-repeat 0.462em 0.615em, -webkit-linear-gradient(#37aa11, #29840c);
-  background: url('/images/../parts/icons/ico-flash-positive.png') no-repeat 0.462em 0.615em, -moz-linear-gradient(#37aa11, #29840c);
-  background: url('/images/../parts/icons/ico-flash-positive.png') no-repeat 0.462em 0.615em, -o-linear-gradient(#37aa11, #29840c);
-  background: url('/images/../parts/icons/ico-flash-positive.png') no-repeat 0.462em 0.615em, -ms-linear-gradient(#37aa11, #29840c);
-  background: url('/images/../parts/icons/ico-flash-positive.png') no-repeat 0.462em 0.615em, linear-gradient(#37aa11, #29840c);
+  background: #37aa11 url('../images/parts/icons/ico-flash-positive.png?1323098066') no-repeat 0.462em 0.615em;
+  background: url('../images/parts/icons/ico-flash-positive.png?1323098066') no-repeat 0.462em 0.615em, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #37aa11), color-stop(100%, #29840c));
+  background: url('../images/parts/icons/ico-flash-positive.png?1323098066') no-repeat 0.462em 0.615em, -webkit-linear-gradient(#37aa11, #29840c);
+  background: url('../images/parts/icons/ico-flash-positive.png?1323098066') no-repeat 0.462em 0.615em, -moz-linear-gradient(#37aa11, #29840c);
+  background: url('../images/parts/icons/ico-flash-positive.png?1323098066') no-repeat 0.462em 0.615em, -o-linear-gradient(#37aa11, #29840c);
+  background: url('../images/parts/icons/ico-flash-positive.png?1323098066') no-repeat 0.462em 0.615em, -ms-linear-gradient(#37aa11, #29840c);
+  background: url('../images/parts/icons/ico-flash-positive.png?1323098066') no-repeat 0.462em 0.615em, linear-gradient(#37aa11, #29840c);
   border-width: 1px;
   border-style: solid;
   border-top-color: #2f930f;
@@ -1386,13 +1386,13 @@ optgroup {
 }
 /* line 42, ../sass/partials/_notifications.scss */
 #notifications .flash.error {
-  background: #ff3019 url('/images/parts/icons/ico-flash-error.png?1323098066') no-repeat 0.462em 0.615em;
-  background: url('/images/parts/icons/ico-flash-error.png?1323098066') no-repeat 0.462em 0.615em, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff3019), color-stop(100%, #d60404));
-  background: url('/images/parts/icons/ico-flash-error.png?1323098066') no-repeat 0.462em 0.615em, -webkit-linear-gradient(#ff3019, #d60404);
-  background: url('/images/parts/icons/ico-flash-error.png?1323098066') no-repeat 0.462em 0.615em, -moz-linear-gradient(#ff3019, #d60404);
-  background: url('/images/parts/icons/ico-flash-error.png?1323098066') no-repeat 0.462em 0.615em, -o-linear-gradient(#ff3019, #d60404);
-  background: url('/images/parts/icons/ico-flash-error.png?1323098066') no-repeat 0.462em 0.615em, -ms-linear-gradient(#ff3019, #d60404);
-  background: url('/images/parts/icons/ico-flash-error.png?1323098066') no-repeat 0.462em 0.615em, linear-gradient(#ff3019, #d60404);
+  background: #ff3019 url('../images/parts/icons/ico-flash-error.png?1323098066') no-repeat 0.462em 0.615em;
+  background: url('../images/parts/icons/ico-flash-error.png?1323098066') no-repeat 0.462em 0.615em, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff3019), color-stop(100%, #d60404));
+  background: url('../images/parts/icons/ico-flash-error.png?1323098066') no-repeat 0.462em 0.615em, -webkit-linear-gradient(#ff3019, #d60404);
+  background: url('../images/parts/icons/ico-flash-error.png?1323098066') no-repeat 0.462em 0.615em, -moz-linear-gradient(#ff3019, #d60404);
+  background: url('../images/parts/icons/ico-flash-error.png?1323098066') no-repeat 0.462em 0.615em, -o-linear-gradient(#ff3019, #d60404);
+  background: url('../images/parts/icons/ico-flash-error.png?1323098066') no-repeat 0.462em 0.615em, -ms-linear-gradient(#ff3019, #d60404);
+  background: url('../images/parts/icons/ico-flash-error.png?1323098066') no-repeat 0.462em 0.615em, linear-gradient(#ff3019, #d60404);
   color: #FFF;
   border-width: 1px;
   border-style: solid;
