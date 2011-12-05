@@ -1,0 +1,64 @@
+#notifications {
+  .flash {
+    @include border-radius;
+    color: #FFF;
+    @include text-shadow(rgba(0,0,0,.4) 0 -1px 0);
+    @include box-shadow(inset rgba(255,255,255, .3) 0 1px 0, rgba(0,0,0,.2) 0 2px 3px);
+    font-size: calc-em(13px, $base-font-size);
+    padding: calc-em(6px, 13px) calc-em(6px, 13px) calc-em(6px, 13px) calc-em(39px, 13px) ;
+    margin: 0 0 calc-em(13px, 13px) 0;
+    > h2 {
+      font-size: calc-em(18px, $base-font-size);
+      line-height: calc-em(24px, 18px);
+      margin: 0 0 calc-em(6px, 18px);
+    } //h2
+    
+    > ul {
+      margin: calc-em(6px, 13px) 0 calc-em(6px, 13px) calc-em(16px, 13px);
+      padding: 0;
+    } //ul
+    
+    &.notice {
+      @include background(#37AA11 image-url('parts/icons/ico-flash-positive.png') no-repeat calc-em(6px, 13px) calc-em(8px, 13px));
+      @include background(image-url('parts/icons/ico-flash-positive.png') no-repeat calc-em(6px, 13px) calc-em(8px, 13px), linear-gradient(#37AA11 #29840c));
+      border: {
+    		width: 1px;
+    		style: solid;
+    		top: {
+    			color: darken(#37AA11, 5%);
+    		}                        
+    		right: {                 
+    			color: darken(#37AA11, 8%);
+    		}                        
+    		bottom: {                
+    			color: darken(#29840c, 5%);
+    		}                        
+    		left: {                  
+    			color: darken(#37AA11, 8%);
+    		}
+    	} //border
+    } //notice
+    
+    &.error {
+      @include background(#ff3019 image-url('parts/icons/ico-flash-error.png') no-repeat calc-em(6px, 13px) calc-em(8px, 13px));
+      @include background(image-url('parts/icons/ico-flash-error.png') no-repeat calc-em(6px, 13px) calc-em(8px, 13px), linear-gradient(#ff3019 #d60404));
+      color: #FFF;
+      border: {
+    		width: 1px;
+    		style: solid;
+    		top: {
+    			color: darken(#ff3019, 5%);
+    		}                        
+    		right: {                 
+    			color: darken(#ff3019, 8%);
+    		}                        
+    		bottom: {                
+    			color: darken(#d60404, 5%);
+    		}                        
+    		left: {                  
+    			color: darken(#ff3019, 8%);
+    		}
+    	} //border
+    } //error
+  } //flash
+} //notifications
