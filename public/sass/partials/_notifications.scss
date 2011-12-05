@@ -16,7 +16,7 @@
     > ul {
       margin: calc-em(6px, 13px) 0 calc-em(6px, 13px) calc-em(16px, 13px);
       padding: 0;
-    } //ul
+    } //ul 
     
     &.notice {
       @include background(#37AA11 image-url('parts/icons/ico-flash-positive.png') no-repeat calc-em(6px, 13px) calc-em(8px, 13px));
