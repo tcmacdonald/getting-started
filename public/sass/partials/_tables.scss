@@ -1,0 +1,51 @@
+table {
+  border: 1px solid #CCC;
+  width: 100%;
+  font-size: calc-em(13px, $base-font-size);
+  tr {
+    &:nth-child(even) {  
+      &:hover {
+        background: darken(#FFF, 2%);
+        cursor: pointer;
+      }
+    } //even
+    &:nth-child(odd) {
+      background: #F9F9F9;
+      border-top: 1px solid #EEE;
+      border-bottom: 1px solid #EEE;
+      &:hover {
+        background: darken(#F9F9F9, 2%);
+        cursor: pointer;
+      }
+    } //odd
+    
+    &:first-child {
+      border-top: none;
+    } //first row
+    
+    &:last-child {
+      border-bottom: none;
+    } //last-row
+    
+    th, td {
+      border-left: 1px solid #CCC;
+      padding: calc-em(6px, 13px);
+      &:first-child {
+       border-left: none; 
+      }
+    } //th, td
+    
+    th {
+      @include background-image(linear-gradient(#FFF #EEE));
+      @include text-shadow(rgba(0,0,0,.1) 0 -1px 0, rgba(255,255,255,1) 0 1px 0);
+      border-bottom: 1px solid #CCC;
+      border-top: 1px solid #CCC;
+      text-align: left;
+    } //th
+    
+    td {
+      
+    } //td
+    
+  } //tr
+} //table
