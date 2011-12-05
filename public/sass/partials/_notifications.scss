@@ -19,7 +19,7 @@
     } //ul
     
     &.notice {
-      @include background(#37AA11 image-url('../images/parts/icons/ico-flash-positive.png') no-repeat calc-em(6px, 13px) calc-em(8px, 13px));
+      @include background(#37AA11 image-url('../parts/icons/ico-flash-positive.png') no-repeat calc-em(6px, 13px) calc-em(8px, 13px));
       @include background(image-url('../images/parts/icons/ico-flash-positive.png') no-repeat calc-em(6px, 13px) calc-em(8px, 13px), linear-gradient(#37AA11 #29840c));
       border: {
     		width: 1px;
