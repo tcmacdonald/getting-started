@@ -1371,12 +1371,12 @@ optgroup {
 /* line 21, ../sass/partials/_notifications.scss */
 #notifications .flash.notice {
   background: #37aa11 url('/images/parts/icons/ico-flash-positive.png?1323098066') no-repeat 0.462em 0.615em;
-  background: url('/images/parts/icons/ico-flash-positive.png?1323098066') no-repeat 0.462em 0.615em, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #37aa11), color-stop(100%, #29840c));
-  background: url('/images/parts/icons/ico-flash-positive.png?1323098066') no-repeat 0.462em 0.615em, -webkit-linear-gradient(#37aa11, #29840c);
-  background: url('/images/parts/icons/ico-flash-positive.png?1323098066') no-repeat 0.462em 0.615em, -moz-linear-gradient(#37aa11, #29840c);
-  background: url('/images/parts/icons/ico-flash-positive.png?1323098066') no-repeat 0.462em 0.615em, -o-linear-gradient(#37aa11, #29840c);
-  background: url('/images/parts/icons/ico-flash-positive.png?1323098066') no-repeat 0.462em 0.615em, -ms-linear-gradient(#37aa11, #29840c);
-  background: url('/images/parts/icons/ico-flash-positive.png?1323098066') no-repeat 0.462em 0.615em, linear-gradient(#37aa11, #29840c);
+  background: url('/images/../parts/icons/ico-flash-positive.png') no-repeat 0.462em 0.615em, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #37aa11), color-stop(100%, #29840c));
+  background: url('/images/../parts/icons/ico-flash-positive.png') no-repeat 0.462em 0.615em, -webkit-linear-gradient(#37aa11, #29840c);
+  background: url('/images/../parts/icons/ico-flash-positive.png') no-repeat 0.462em 0.615em, -moz-linear-gradient(#37aa11, #29840c);
+  background: url('/images/../parts/icons/ico-flash-positive.png') no-repeat 0.462em 0.615em, -o-linear-gradient(#37aa11, #29840c);
+  background: url('/images/../parts/icons/ico-flash-positive.png') no-repeat 0.462em 0.615em, -ms-linear-gradient(#37aa11, #29840c);
+  background: url('/images/../parts/icons/ico-flash-positive.png') no-repeat 0.462em 0.615em, linear-gradient(#37aa11, #29840c);
   border-width: 1px;
   border-style: solid;
   border-top-color: #2f930f;
