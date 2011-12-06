@@ -34,16 +34,16 @@ form {
   .form-buttons {
     width: 100%;
     .primary-action {
-      @include submit-button;
+      @include create-button(#4096ee);
     }
     .secondary-action {
-      @include button-defaults;
+      @include create-button(#FFF);
     }
     .successful-action {
-      @include successful-button;
+      @include create-button(#37AA11);
     }
     .warning-action {
-      @include warning-button;
+      @include create-button(#333);
     }
   }
   

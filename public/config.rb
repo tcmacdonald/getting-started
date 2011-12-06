@@ -1,4 +1,5 @@
 # Require any additional compass plugins here.
+require 'magick' # Used to generate buttons for versions of IE that do not support CSS3 features
 
 # Set this to the root of your project when deployed:
 http_path = "/"
